@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BTC/USD Chart</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <h2>BTC/USD Price Chart</h2>
+
+  <label for="intervalSelect">Select interval:</label>
+  <select id="intervalSelect">
+    <option value="1">1 minute</option>
+    <option value="5">5 minutes</option>
+    <option value="15">15 minutes</option>
+  </select>
+
+  <canvas id="btcChart" width="800" height="400"></canvas>
+
+  <script src="js/btcChart.js"></script>
+</body>
+</html>

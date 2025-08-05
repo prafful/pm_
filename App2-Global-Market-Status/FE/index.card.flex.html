@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Global Market Status (IST)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .container-flex {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      min-height: 100vh;
+    }
+
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .market-card {
+      flex: 1 1 280px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      padding: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .market-title {
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    .status-badge {
+      font-size: 0.9rem;
+      padding: 0.4em 0.7em;
+    }
+
+    .market-info {
+      font-size: 0.95rem;
+      margin: 0.25rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-flex">
+    <h2 class="mb-4 text-center">🌐 Global Market Timings (IST)</h2>
+    <div id="marketCardGrid" class="card-grid">
+      <!-- Cards will be dynamically added here -->
+      <div class="text-muted">Loading markets...</div>
+    </div>
+  </div>
+
+  <script src="js/marketstatus.card.flex.js"></script>
+</body>
+</html>

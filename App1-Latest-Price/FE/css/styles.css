@@ -1,0 +1,62 @@
+/* Reset basic styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+/* Centered container */
+.container {
+  max-width: 500px;
+  margin: 80px auto;
+  padding: 30px;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* Price display */
+#priceDisplay {
+  font-size: 22px;
+  font-weight: 500;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Highlighted price value */
+#priceValue {
+  font-size: 32px;
+  font-weight: bold;
+  color: #2ecc71;
+  margin-left: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .container {
+    margin: 40px 20px;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  #priceDisplay {
+    font-size: 18px;
+  }
+
+  #priceValue {
+    font-size: 26px;
+  }
+}

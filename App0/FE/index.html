@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Live BTC Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+
+</head>
+
+<body>
+    <h2>BTC-USD Live Chart (MySQL + REST)</h2>
+    <div id="latestPrice" style="font-size: 1.5em; margin-bottom: 1em;">
+        Latest Price: <span id="priceValue">--</span> USD
+
+        <br>
+        <div style="margin-bottom: 1em;">
+  <label for="intervalSelect">⏱️ Chart Interval: </label>
+  <select id="intervalSelect">
+    <option value="1">Realtime</option>
+    <option value="5">5 Min</option>
+    <option value="15">15 Min</option>
+    <option value="60">60 Min</option>
+  </select>
+</div>
+
+<canvas id="btcChart" width="800" height="400"></canvas>
+
+<input type="number" id="buyAmount" placeholder="USD to buy">
+<button onclick="buy()">Buy BTC</button>
+
+<input type="number" id="sellAmount" placeholder="BTC to sell">
+<button onclick="sell()">Sell BTC</button>
+
+<div>
+ <h2><span id="walletStatus" style="margin-left: 10px; font-weight: bold;"></span></h2>
+  
+</div>
+<canvas id="tradeHistoryChart" width="800" height="300"></canvas>
+<table border="1" style="width:100%; margin-top: 20px;" id="tradeHistoryTable">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>BTC Amount</th>
+      <th>Price (INR)</th>
+      <th>Timestamp</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+
+
+        <hr>
+        <div id="marketStatusBox" style="border: 1px solid #ccc; padding: 10px; margin-top: 20px;">
+            <h3>Global Market Status</h3>
+            <ul id="marketStatusGrid" style="display: flex; flex-wrap: wrap; gap: 10px;"></ul>
+        </div>
+
+        
+<script src="/js/btcChart.js"></script>
+<script src="/js/tradehistory.js"></script>
+
+
+</body>
+
+</html>
